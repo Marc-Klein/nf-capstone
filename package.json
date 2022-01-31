@@ -23,8 +23,9 @@
     "test": "npm run test:unit && npm run test:e2e"
   },
   "dependencies": {
-    "@emotion/react": "11.7.1",
-    "@emotion/styled": "11.6.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.3.1",
     "axios": "0.24.0",
     "next": "12.0.8",
     "react": "17.0.2",
