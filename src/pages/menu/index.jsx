@@ -18,6 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Menu = () => {
+	const size = { fontSize: 60 };
 	return (
 		<Box
 			sx={{
@@ -37,42 +38,42 @@ const Menu = () => {
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
-								<Route />
+								<Route sx={size} />
 							</Item>
 						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
-								<CoPresentIcon />
+								<CoPresentIcon sx={size} />
 							</Item>
 						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
-								<QrCode2Icon />
+								<QrCode2Icon sx={size} />
 							</Item>
 						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
-								<PeopleAltIcon />
+								<PeopleAltIcon sx={size} />
 							</Item>
 						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
-								<Logout />
+								<Logout sx={size} />
 							</Item>
 						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
-								<Settings />
+								<Settings sx={size} />
 							</Item>
 						</MenuLink>
 					</Grid>
