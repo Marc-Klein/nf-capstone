@@ -34,7 +34,7 @@ const Menu = () => {
 		>
 			<h2>Test</h2>
 			<Container>
-				<Grid container spacing={3} columns={{ xs: 4 }}>
+				<Grid container spacing={1.5} columns={{ xs: 4 }}>
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
