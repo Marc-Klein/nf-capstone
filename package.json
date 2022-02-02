@@ -20,14 +20,16 @@
     "storybook:build": "build-storybook",
     "test:e2e": "npx start-server-and-test@1 start http://localhost:3000 cypress:run",
     "test:unit": "npm run jest",
-    "test": "npm run test:unit && npm run test:e2e"
+    "test": "npm run test:unit"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "@mui/material": "^5.3.1",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/material": "^5.4.0",
     "axios": "0.24.0",
     "next": "12.0.8",
+    "next-pwa": "^5.4.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "zustand": "3.6.9"
