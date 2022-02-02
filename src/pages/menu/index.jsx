@@ -6,7 +6,7 @@ import { experimentalStyled as styled } from "@mui/material/styles";
 import Link from "next/link";
 import Container from "@mui/material/Container";
 import icon from "@mui/icons-material";
-import { PeopleAltIcon as BuddyIcon } from "@mui/icons-material/PeopleAlt";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { Settings, Logout, Route } from "@mui/icons-material";
 import { QrCode2Icon as QrCodeIcon } from "@mui/icons-material/QrCode2";
 import { CoPresentIcon as BuddyWatchIcon } from "@mui/icons-material/CoPresent";
@@ -37,11 +37,11 @@ const Menu = () => {
 			<Container>
 				<Grid container spacing={3} columns={{ xs: 4 }}>
 					<Grid item xs={2} md={4}>
-						<Item>
-							<MenuLink href="/">
-								<BuddyIcon />
-							</MenuLink>
-						</Item>
+						<MenuLink href="/">
+							<Item>
+								<PeopleAltIcon />
+							</Item>
+						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
 						<Item>

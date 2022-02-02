@@ -6,11 +6,13 @@ const RedLink = styled.a`
 	color: red;
 `;
 
-const MenuLink = ({ href, name }) => {
-	// Must add passHref to Link
+const MenuLink = ({ href, children }) => {
+	// Must add passHref to Link and before href because its a shorthand
 	return (
+		// eslint-disable-next-line react/react-in-jsx-scope
 		<Link passHref href={href}>
-			<RedLink>{name}</RedLink>
+			{/* eslint-disable-next-line react/react-in-jsx-scope */}
+			<RedLink>{children}</RedLink>
 		</Link>
 	);
 };
