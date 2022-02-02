@@ -8,8 +8,8 @@ import Container from "@mui/material/Container";
 import icon from "@mui/icons-material";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { Settings, Logout, Route } from "@mui/icons-material";
-import { QrCode2Icon as QrCodeIcon } from "@mui/icons-material/QrCode2";
-import { CoPresentIcon as BuddyWatchIcon } from "@mui/icons-material/CoPresent";
+import QrCode2Icon from "@mui/icons-material/QrCode2";
+import CoPresentIcon from "@mui/icons-material/CoPresent";
 import MenuLink from "../../atoms/menu-link";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -39,34 +39,44 @@ const Menu = () => {
 					<Grid item xs={2} md={4}>
 						<MenuLink href="/">
 							<Item>
+								<Route />
+							</Item>
+						</MenuLink>
+					</Grid>
+					<Grid item xs={2} md={4}>
+						<MenuLink href="/">
+							<Item>
+								<CoPresentIcon />
+							</Item>
+						</MenuLink>
+					</Grid>
+					<Grid item xs={2} md={4}>
+						<MenuLink href="/">
+							<Item>
+								<QrCode2Icon />
+							</Item>
+						</MenuLink>
+					</Grid>
+					<Grid item xs={2} md={4}>
+						<MenuLink href="/">
+							<Item>
 								<PeopleAltIcon />
 							</Item>
 						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
-						<Item>
-							<Link href="/">Im a Menupoint</Link>
-						</Item>
+						<MenuLink href="/">
+							<Item>
+								<Logout />
+							</Item>
+						</MenuLink>
 					</Grid>
 					<Grid item xs={2} md={4}>
-						<Item>
-							<Link href="/">Im a Menupoint</Link>
-						</Item>
-					</Grid>
-					<Grid item xs={2} md={4}>
-						<Item>
-							<Link href="/">Im a Menupoint</Link>
-						</Item>
-					</Grid>
-					<Grid item xs={2} md={4}>
-						<Item>
-							<Link href="/">Im a Menupoint</Link>
-						</Item>
-					</Grid>
-					<Grid item xs={2} md={4}>
-						<Item>
-							<Link href="/">Im a Menupoint</Link>
-						</Item>
+						<MenuLink href="/">
+							<Item>
+								<Settings />
+							</Item>
+						</MenuLink>
 					</Grid>
 				</Grid>
 			</Container>
