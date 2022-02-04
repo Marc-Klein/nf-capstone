@@ -1,5 +1,7 @@
 import React from "react";
-import NoSsrMap from "../../atoms/noSSR/index";
+import dynamic from "next/dynamic";
+
+const NoSsrMap = dynamic(() => import("../../atoms/initialize-map"), { ssr: false });
 
 const MyMap = () => {
 	return <NoSsrMap />;

@@ -7,7 +7,7 @@ const Page = () => {
 	return (
 		<Layout>
 			<Head>
-				<title key="title">My Project</title>
+				<title key="title">Walk with me</title>
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
