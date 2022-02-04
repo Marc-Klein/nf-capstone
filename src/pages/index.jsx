@@ -7,8 +7,11 @@ const Page = () => {
 	return (
 		<Layout>
 			<Head>
-				<title key="title">My Project</title>
-				<meta key="description" name="description" content="This is my project" />
+				<title key="title">Walk with me</title>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+				/>
 			</Head>
 			<Menu />
 		</Layout>
