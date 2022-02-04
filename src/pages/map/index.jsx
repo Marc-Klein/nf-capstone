@@ -1,8 +1,8 @@
 import React from "react";
-import Map from "../../atoms/initialize-map/index.jsx";
+import NoSsrMap from "../../atoms/noSSR/index";
 
 const MyMap = () => {
-	return <Map />;
+	return <NoSsrMap />;
 };
 
 export default MyMap;
