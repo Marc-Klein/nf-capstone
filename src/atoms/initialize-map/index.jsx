@@ -1,15 +1,8 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-import styled from "@emotion/styled";
-
-const StyledMapContainer = styled(MapContainer)`
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-`;
+import StyledMapContainer from "./styled.js";
 
 const Map = () => {
 	return (
