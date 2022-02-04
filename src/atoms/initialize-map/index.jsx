@@ -5,10 +5,10 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import styled from "@emotion/styled";
 
 const StyledMapContainer = styled(MapContainer)`
-	padding: 0;
-	margin: 0;
-	height: 100vh;
 	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
 `;
 
 const Map = () => {
