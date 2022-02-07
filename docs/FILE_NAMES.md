@@ -11,7 +11,7 @@ atoms
    ┃  ┣━ constants.js
    ┃  ┣━ index.jsx
    ┃  ┣━ styled.js
-   ┃  ┣━ styles.js 
+   ┃  ┣━ styled.js 
    ┃  ┣━ types.js
    ┃  ┣━ utils.js
    ┃  ┗━ [*].js
@@ -21,7 +21,7 @@ atoms
 * `constants.js`: local constants
 * `index.jsx`: the main component (`export default`)
 * `styled.js`: styled components via `import styled from "@emotion/styled"`
-* `styles.js`: styles  via `import {css} from "@emotion/react"`
+* `styled.js`: styles  via `import {css} from "@emotion/react"`
 * `utils.js`: local utility functions
 * `[*].ts`: add more files in case you need them
   * i.e. `items.{js,json}`
