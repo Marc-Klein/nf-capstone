@@ -7,6 +7,7 @@ import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import ReportIcon from "@mui/icons-material/Report";
 import ShieldIcon from "@mui/icons-material/Shield";
 import HomeIcon from "@mui/icons-material/Home";
+// import StyledBottomNavigationAction from "./styled";
 
 const BottomNav = () => {
 	const [value, setValue] = React.useState("");
@@ -16,11 +17,12 @@ const BottomNav = () => {
 
 	return (
 		//State handling will be refactored with Zustand
-		<BottomNavigation sx={{ width: 400 }} value={value} onChange={handleChange}>
-			<BottomNavigationAction label="Recents" value="recents" icon={<ReportIcon />} />
+
+		<BottomNavigation sx={{ width: "100%" }} value={value} onChange={handleChange}>
+			<BottomNavigationAction label="Danger" value="danger" icon={<ReportIcon />} />
 			<BottomNavigationAction
-				label="Recents"
-				value="recents"
+				label="Aware"
+				value="aware"
 				icon={<ReportGmailerrorredIcon />}
 			/>
 			<BottomNavigationAction label="Safe" value="safe" icon={<ShieldIcon />} />
