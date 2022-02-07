@@ -1,5 +1,4 @@
 import React from "react";
-// import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -7,7 +6,6 @@ import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import ReportIcon from "@mui/icons-material/Report";
 import ShieldIcon from "@mui/icons-material/Shield";
 import HomeIcon from "@mui/icons-material/Home";
-// import StyledBottomNavigationAction from "./styled";
 
 const BottomNav = () => {
 	const [value, setValue] = React.useState("");
@@ -16,8 +14,6 @@ const BottomNav = () => {
 	};
 
 	return (
-		//State handling will be refactored with Zustand
-
 		<BottomNavigation sx={{ width: "100%" }} value={value} onChange={handleChange}>
 			<BottomNavigationAction label="Danger" value="danger" icon={<ReportIcon />} />
 			<BottomNavigationAction
@@ -33,4 +29,3 @@ const BottomNav = () => {
 };
 
 export default BottomNav;
-//https://mui.com/components/bottom-navigation/
