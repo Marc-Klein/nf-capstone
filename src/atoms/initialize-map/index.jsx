@@ -5,6 +5,8 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import StyledMapContainer from "./styled.js";
 
 const Map = () => {
+	const getLatitude = useStore(state => state.getLatitude);
+	const getLongitude = useStore(state => state.getLongitude);
 	return (
 		<StyledMapContainer center={[49.233334, 7.0]} zoom={[16]} scrollWheelZoom={false}>
 			<TileLayer
