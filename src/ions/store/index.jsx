@@ -2,32 +2,23 @@ import create from "zustand";
 import produce from "immer";
 
 const useStore = create(set => ({
-	// position: {
-	// 	latitude: null,
-	// 	longitude: null,
-	// 	accuracy: null,
-	// },
-
-	latitude: [],
-	setLatitude: () => {
-		set(
-			produce(state => {
-				state.navigator.geolocation.getCurrentPosition((...args) => {
-					args[0].coords.latitude;
-				});
-			})
-		);
+	currentPosition: null,
+	setCurrentPosition: () => {
+		navigator.geolocation.getCurrentPosition(currentPosition => {
+			set(
+				produce(state => {
+					state.currentPosition = currentPosition;
+				})
+			);
+		});
 	},
 
-	longitude: [],
-	setLongitude: () => {
-		set(
-			produce(state => {
-				state.navigator.geolocation.getCurrentPosition((...args) => {
-					args[0].coords.longitude;
-				});
-			})
-		);
+	setCurrentPositionOhneImmer: () => {
+		navigator.geolocation.getCurrentPosition(currentPosition => {
+			set(() => ({
+				currentPosition,
+			}));
+		});
 	},
 }));
 
