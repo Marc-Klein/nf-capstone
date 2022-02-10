@@ -3,8 +3,7 @@ import { TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import StyledMapContainer from "./styled.js";
-// import process from "node:process";
-// const LEAFLET_TOKEN = process.env.LEAFLET_TOKEN;
+
 const Map = () => {
 	return (
 		<StyledMapContainer center={[49.233334, 7.0]} zoom={[16]} scrollWheelZoom={false}>
