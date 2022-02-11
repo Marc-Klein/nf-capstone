@@ -4,7 +4,6 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import StyledMapContainer from "./styled.js";
 import Location from "../get-position";
-import getAccessToken from "../accesToken-fetch";
 
 const Map = () => {
 	return (
