@@ -9,7 +9,7 @@ each other.
 atoms
    ┣━ my-component
    ┃  ┣━ constants.js
-   ┃  ┣━ index.jsx
+   ┃  ┣━ index.js
    ┃  ┣━ styled.js
    ┃  ┣━ styled.js 
    ┃  ┣━ types.js
@@ -19,7 +19,7 @@ atoms
 ```
 
 * `constants.js`: local constants
-* `index.jsx`: the main component (`export default`)
+* `index.js`: the main component (`export default`)
 * `styled.js`: styled components via `import styled from "@emotion/styled"`
 * `styled.js`: styles  via `import {css} from "@emotion/react"`
 * `utils.js`: local utility functions
@@ -28,7 +28,7 @@ atoms
   
 ## Exports
 
-We use named exports in all files except for the `index.jsx`.
+We use named exports in all files except for the `index.js`.
 We need to use `export default` to allow better DX when using components in dynamic imports
 
 ## File extension

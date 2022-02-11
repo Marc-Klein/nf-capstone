@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useMapEvents, Marker, Popup } from "react-leaflet";
+import PositionIcon from "../position-icon";
 
 const Location = () => {
 	const [position, setPosition] = useState(null);
