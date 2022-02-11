@@ -7,7 +7,7 @@ const NoSsrMap = dynamic(() => import("../../atoms/initialize-map"), { ssr: fals
 const MyMap = () => {
 	return (
 		<div style={{ overflow: "hidden" }}>
-			<NoSsrMap poll={20_000} />
+			<NoSsrMap />
 			<BottomNav />
 		</div>
 	);
