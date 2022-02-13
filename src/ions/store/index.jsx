@@ -2,13 +2,6 @@ import create from "zustand";
 
 const useStore = create(set => ({
 	currentPosition: null,
-	setCurrentPosition: () => {
-		navigator.geolocation.getCurrentPosition(currentPosition => {
-			set(() => ({
-				currentPosition,
-			}));
-		});
-	},
 }));
 
 export default useStore;

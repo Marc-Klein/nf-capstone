@@ -6,6 +6,7 @@ import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import ReportIcon from "@mui/icons-material/Report";
 import ShieldIcon from "@mui/icons-material/Shield";
 import HomeIcon from "@mui/icons-material/Home";
+// import Location from "../../atoms/get-position";
 
 const BottomNav = () => {
 	const [value, setValue] = React.useState("");
