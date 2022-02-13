@@ -8,7 +8,7 @@ import Location from "../get-position";
 const Map = () => {
 	return (
 		<StyledMapContainer
-			center={{ lat: 49.220915, lng: 10.357579 }}
+			center={{ lat: 51.220915, lng: 10.357579 }}
 			zoom={[6]}
 			scrollWheelZoom={false}
 		>
