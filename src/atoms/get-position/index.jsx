@@ -13,11 +13,11 @@ const GetIcon = _iconSize => {
 };
 
 //maybe where the map gets rendered
-const Location = locationFound => {
+const Location = () => {
 	const [position, setPosition] = useState(null);
 	const map = useMapEvents({
 		click() {
-			map.locate(locationFound);
+			map.locate();
 		},
 		locationfound(event) {
 			setPosition(event.latlng);
