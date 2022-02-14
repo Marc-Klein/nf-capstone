@@ -6,6 +6,7 @@ import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import ReportIcon from "@mui/icons-material/Report";
 import ShieldIcon from "@mui/icons-material/Shield";
 import HomeIcon from "@mui/icons-material/Home";
+
 // import Location from "../../atoms/get-position";
 
 const BottomNav = () => {
@@ -13,6 +14,9 @@ const BottomNav = () => {
 	const handleChange = () => (event, newValue) => {
 		setValue(newValue);
 	};
+	//Todo how to pass locate method to get position
+	// const locateMe= ()=> {
+	// 	return useMapEvents(locateMe.locate()}
 
 	return (
 		<BottomNavigation sx={{ width: "100%" }} value={value} onChange={handleChange}>

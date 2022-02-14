@@ -25,6 +25,9 @@ const Location = () => {
 			map.flyTo(event.latlng, [16]);
 		},
 	});
+	map.on("click", event => {
+		console.log(event);
+	});
 	return position === null ? null : (
 		<Marker position={position} icon={GetIcon(20)}>
 			<Popup>You are here!</Popup>
