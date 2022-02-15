@@ -32,9 +32,7 @@ const Location = () => {
 			map.flyTo(event.latlng, [16]);
 		},
 	});
-	map.on("click", event => {
-		console.log(event);
-	});
+
 	return position === null ? null : (
 		<Marker animate position={position} icon={markerIcon}>
 			<Popup>You are here!</Popup>

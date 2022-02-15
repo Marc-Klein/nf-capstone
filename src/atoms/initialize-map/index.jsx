@@ -8,10 +8,12 @@ import Location from "../get-position";
 const Map = () => {
 	return (
 		<StyledMapContainer
+			watch
+			enableHighAccuracy
+			zoomControl
 			center={{ lat: 51.220915, lng: 10.357579 }}
 			zoom={[6]}
 			scrollWheelZoom={false}
-			zoomControl={false}
 		>
 			<TileLayer url="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWFrbDg5IiwiYSI6ImNrejg4NHY3azA2djcybm8xdmx4M2xpdHcifQ.ftANL_cw0hp3m_NUP-CeoQ" />
 			<Location />
