@@ -48,6 +48,7 @@ const leafletButton = css`
 		box-shadow: 5px 5px 3px -2px #000;
 	}
 `;
+
 const leafletButtonStyles = <Global styles={leafletButton} />;
 
 const Map = () => {
