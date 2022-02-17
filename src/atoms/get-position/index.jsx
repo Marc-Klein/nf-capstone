@@ -25,7 +25,7 @@ const Location = () => {
 	const map = useMapEvents({
 		locationfound(event) {
 			setPosition(event.latlng);
-			map.flyTo(event.latlng, map.getZoom());
+			map.flyTo(event.latlng, [16]);
 		},
 	});
 
