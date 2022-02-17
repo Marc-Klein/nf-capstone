@@ -1,5 +1,5 @@
 import React from "react";
-import BottomNavigation from "@mui/material/BottomNavigation";
+import StyledBottomNav from "./styled";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import ReportIcon from "@mui/icons-material/Report";
@@ -13,7 +13,7 @@ const BottomNav = () => {
 	};
 
 	return (
-		<BottomNavigation sx={{ width: "100%" }} value={value} onChange={handleChange}>
+		<StyledBottomNav sx={{ width: "100%" }} value={value} onChange={handleChange}>
 			<BottomNavigationAction label="Danger" value="danger" icon={<ReportIcon />} />
 			<BottomNavigationAction
 				label="Aware"
@@ -22,7 +22,7 @@ const BottomNav = () => {
 			/>
 			<BottomNavigationAction label="Safe" value="safe" icon={<ShieldIcon />} />
 			<BottomNavigationAction label="Home" value="home" icon={<HomeIcon />} />
-		</BottomNavigation>
+		</StyledBottomNav>
 	);
 };
 
