@@ -1,19 +1,38 @@
 import Head from "next/head";
 import React from "react";
-import Menu from "./menu/index.jsx";
 import Layout from "../organisms/layout";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import Button from "@mui/material/Button";
+import Map from "./map";
+
+import { signIn, useSession } from "next-auth/react";
 
 const Page = () => {
+	const { data: session } = useSession();
+	if (!session) {
+		return (
+			<>
+				You have to be signed in to see this page!
+				<br />
+				Please sign in!
+				<Button
+					startIcon={<GitHubIcon />}
+					onClick={() => {
+						signIn("github");
+					}}
+				>
+					Sign in with GitHub!
+				</Button>
+			</>
+		);
+	}
+
 	return (
 		<Layout>
 			<Head>
 				<title key="title">Walk with me</title>
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-				/>
 			</Head>
-			<Menu />
+			<Map />
 		</Layout>
 	);
 };
