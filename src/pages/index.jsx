@@ -12,12 +12,11 @@ const StyledDiv = styled.div`
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 80%;
 	align-items: center;
 	justify-content: center;
+	width: 80%;
 	height: 30%;
-
+	transform: translate(-50%, -50%);
 	border-radius: 5px;
 	background: hotpink;
 `;
