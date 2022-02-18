@@ -1,29 +1,35 @@
 import Head from "next/head";
 import React from "react";
 import Layout from "../organisms/layout";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import Button from "@mui/material/Button";
+// import Box from "@mui/material/Box";
 import Map from "./map";
+import CustomLogin from "../molecules/login";
+import { useSession } from "next-auth/react";
+import styled from "@emotion/styled";
 
-import { signIn, useSession } from "next-auth/react";
+const StyledDiv = styled.div`
+	//position: absolute;
+	//top: 50%;
+	//left: 50%;
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	justify-content: center;
+	align-items: center;
+`;
 
 const Page = () => {
 	const { data: session } = useSession();
 	if (!session) {
 		return (
-			<>
-				You have to be signed in to see this page!
-				<br />
-				Please sign in!
-				<Button
-					startIcon={<GitHubIcon />}
-					onClick={() => {
-						signIn("github");
-					}}
-				>
-					Sign in with GitHub!
-				</Button>
-			</>
+			<Layout>
+				<StyledDiv>
+					<CustomLogin />
+				</StyledDiv>
+			</Layout>
 		);
 	}
 
