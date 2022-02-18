@@ -23,8 +23,8 @@ const StyledDiv = styled.div`
 
 const StyledBox = styled(Box)`
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 200%;
 `;
