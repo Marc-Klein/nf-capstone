@@ -8,20 +8,18 @@ import { useSession } from "next-auth/react";
 import styled from "@emotion/styled";
 
 const StyledDiv = styled.div`
-	//position: absolute;
-	//top: 50%;
-	//left: 50%;
 	display: flex;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 80%;
-	height: 30%;
-	justify-content: center;
 	align-items: center;
-	background: hotpink;
+	justify-content: center;
+	height: 30%;
+
 	border-radius: 5px;
+	background: hotpink;
 `;
 
 const StyledBox = styled(Box)`
