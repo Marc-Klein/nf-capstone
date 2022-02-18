@@ -11,13 +11,13 @@ const StyledButton = styled(Button)`
 	border: none;
 `;
 
-const StyledButtonGroup = styled(ButtonGroup)`
+const StyledButtonContainer = styled(ButtonGroup)`
 	border: none;
 `;
 
 const CustomLogin = () => {
 	return (
-		<StyledButtonGroup orientation="vertical" aria-label="vertical button group">
+		<StyledButtonContainer orientation="vertical" aria-label="vertical button group">
 			<StyledButton
 				sx={{
 					background: "black",
@@ -54,7 +54,7 @@ const CustomLogin = () => {
 			>
 				Sign in with Google!
 			</StyledButton>
-		</StyledButtonGroup>
+		</StyledButtonContainer>
 	);
 };
 

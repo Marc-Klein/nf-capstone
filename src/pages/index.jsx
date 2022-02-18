@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Layout from "../organisms/layout";
-// import Box from "@mui/material/Box";
+import Box from "@mui/material/Box";
 import Map from "./map";
 import CustomLogin from "../molecules/login";
 import { useSession } from "next-auth/react";
@@ -16,20 +16,31 @@ const StyledDiv = styled.div`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 70%;
+	width: 80%;
+	height: 30%;
 	justify-content: center;
 	align-items: center;
+	background: hotpink;
+	border-radius: 5px;
+`;
+
+const StyledBox = styled(Box)`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 200%;
 `;
 
 const Page = () => {
 	const { data: session } = useSession();
 	if (!session) {
 		return (
-			<Layout>
-				<StyledDiv>
+			<StyledDiv>
+				<StyledBox>
 					<CustomLogin />
-				</StyledDiv>
-			</Layout>
+				</StyledBox>
+			</StyledDiv>
 		);
 	}
 
