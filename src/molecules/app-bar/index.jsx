@@ -11,9 +11,10 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import StyledAppBar from "./styled";
+import { signOut } from "next-auth/react";
 
 const pages = ["Invite a Buddy!", "Who are my Buddies?"];
-const settings = ["Login", "Logout"];
+const settings = ["Logout"];
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -127,7 +128,15 @@ const ResponsiveAppBar = () => {
 						>
 							{settings.map(setting => (
 								<MenuItem key={setting} onClick={handleCloseUserMenu}>
-									<Typography textAlign="center">{setting}</Typography>
+									<Typography textAlign="center">
+										<Button
+											onClick={() => {
+												void signOut();
+											}}
+										>
+											{setting}
+										</Button>
+									</Typography>
 								</MenuItem>
 							))}
 						</Menu>
