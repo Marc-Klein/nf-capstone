@@ -130,6 +130,7 @@ const ResponsiveAppBar = () => {
 								<MenuItem key={setting} onClick={handleCloseUserMenu}>
 									<Typography textAlign="center">
 										<Button
+											disableRipple
 											onClick={() => {
 												void signOut();
 											}}
