@@ -22,6 +22,7 @@ const CustomLogin = () => {
 				sx={{
 					background: "black",
 					color: "white",
+					letterSpacing: "0.2em",
 				}}
 				startIcon={<GitHubIcon />}
 				onClick={() => {
@@ -34,6 +35,7 @@ const CustomLogin = () => {
 				sx={{
 					background: "#3b5998",
 					color: "white",
+					letterSpacing: "0.1em",
 				}}
 				startIcon={<FacebookIcon />}
 				onClick={() => {
@@ -46,6 +48,7 @@ const CustomLogin = () => {
 				sx={{
 					background: "#db4a39",
 					color: "white",
+					letterSpacing: "0.165em",
 				}}
 				startIcon={<GoogleIcon />}
 				onClick={() => {
