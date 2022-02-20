@@ -12,8 +12,10 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import StyledAppBar from "./styled";
 import { signOut, useSession } from "next-auth/react";
+// import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+// import CoPresentIcon from "@mui/icons-material/CoPresent";
 
-const pages = ["Invite a Buddy!", "Who are my Buddies?"];
+const pages = ["Invite!", "Show Buddies!"];
 const settings = ["Logout"];
 
 const ResponsiveAppBar = () => {
