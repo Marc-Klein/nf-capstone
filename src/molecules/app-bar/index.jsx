@@ -11,11 +11,15 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import StyledAppBar from "./styled";
+import { signOut, useSession } from "next-auth/react";
+// import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+// import CoPresentIcon from "@mui/icons-material/CoPresent";
 
-const pages = ["Invite a Buddy!", "Who are my Buddies?"];
-const settings = ["Login", "Logout"];
+const pages = ["Invite!", "Show Buddies!"];
+const settings = ["Logout"];
 
 const ResponsiveAppBar = () => {
+	const { data: session } = useSession();
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
 	const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -106,7 +110,7 @@ const ResponsiveAppBar = () => {
 					<Box sx={{ flexGrow: 0 }}>
 						<Tooltip title="Open settings">
 							<IconButton sx={{ p: 0 }} onClick={handleOpenUserMenu}>
-								<Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+								<Avatar src={session.user.image} alt={session.user.name} />
 							</IconButton>
 						</Tooltip>
 						<Menu
@@ -127,7 +131,16 @@ const ResponsiveAppBar = () => {
 						>
 							{settings.map(setting => (
 								<MenuItem key={setting} onClick={handleCloseUserMenu}>
-									<Typography textAlign="center">{setting}</Typography>
+									<Typography textAlign="center">
+										<Button
+											disableRipple
+											onClick={() => {
+												void signOut();
+											}}
+										>
+											{setting}
+										</Button>
+									</Typography>
 								</MenuItem>
 							))}
 						</Menu>

@@ -1,9 +1,7 @@
 import React from "react";
-import dynamic from "next/dynamic";
+import NoSsrMap from "../../atoms/no-ssr";
 import BottomNav from "../../molecules/bottom-nav";
 import ResponsiveAppBar from "../../molecules/app-bar";
-
-const NoSsrMap = dynamic(() => import("../../atoms/initialize-map"), { ssr: false });
 
 const MyMap = () => {
 	return (

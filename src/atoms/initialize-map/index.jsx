@@ -1,10 +1,9 @@
-import { TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import StyledMapContainer from "./styled.js";
 import Location from "../get-position";
 import React, { useCallback, useEffect } from "react";
-import { useMap } from "react-leaflet";
+import { useMap, TileLayer } from "react-leaflet";
 import Leaflet from "leaflet";
 import { css, Global } from "@emotion/react";
 
