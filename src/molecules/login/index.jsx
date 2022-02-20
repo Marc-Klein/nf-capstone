@@ -20,9 +20,12 @@ const CustomLogin = () => {
 		<StyledButtonContainer orientation="vertical" aria-label="vertical button group">
 			<StyledButton
 				sx={{
-					background: "black",
+					background: "#000",
 					color: "white",
 					letterSpacing: "0.2em",
+					"&.MuiButtonBase-root:hover": {
+						bgcolor: "#000",
+					},
 				}}
 				startIcon={<GitHubIcon />}
 				onClick={() => {
@@ -36,6 +39,9 @@ const CustomLogin = () => {
 					background: "#3b5998",
 					color: "white",
 					letterSpacing: "0.1em",
+					"&.MuiButtonBase-root:hover": {
+						bgcolor: "#3b5998",
+					},
 				}}
 				startIcon={<FacebookIcon />}
 				onClick={() => {
@@ -49,6 +55,9 @@ const CustomLogin = () => {
 					background: "#db4a39",
 					color: "white",
 					letterSpacing: "0.165em",
+					"&.MuiButtonBase-root:hover": {
+						bgcolor: "#db4a39",
+					},
 				}}
 				startIcon={<GoogleIcon />}
 				onClick={() => {
