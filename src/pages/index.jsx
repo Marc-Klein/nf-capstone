@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Layout from "../organisms/layout";
 import Box from "@mui/material/Box";
-import Map from "./map";
+import Map from "../organisms/map";
 import CustomLogin from "../molecules/login";
 import { useSession } from "next-auth/react";
 import styled from "@emotion/styled";
