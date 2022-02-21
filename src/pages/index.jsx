@@ -17,10 +17,11 @@ const StyledDiv = styled.div`
 	justify-content: center;
 	width: 90%;
 	height: 35%;
+	max-width: 400px;
+	max-height: 380px;
 	transform: translate(-50%, -50%);
 	border-radius: 2em;
 	background: #fff;
-	max-width: 400px;
 	box-shadow: 0 0 15px -1px #000;
 `;
 
