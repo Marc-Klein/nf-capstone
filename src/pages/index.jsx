@@ -16,8 +16,8 @@ const StyledDiv = styled.div`
 	align-items: center;
 	justify-content: center;
 	max-width: 400px;
-	max-height: 380px;
 	width: 90%;
+	max-height: 380px;
 	height: 35%;
 	transform: translate(-50%, -50%);
 	border-radius: 2em;
