@@ -15,10 +15,10 @@ const StyledDiv = styled.div`
 	left: 50%;
 	align-items: center;
 	justify-content: center;
-	width: 90%;
-	height: 35%;
 	max-width: 400px;
 	max-height: 380px;
+	width: 90%;
+	height: 35%;
 	transform: translate(-50%, -50%);
 	border-radius: 2em;
 	background: #fff;
