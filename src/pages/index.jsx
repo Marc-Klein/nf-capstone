@@ -20,8 +20,8 @@ const StyledDiv = styled.div`
 	transform: translate(-50%, -50%);
 	border-radius: 2em;
 	background: #fff;
-	box-shadow: 0 0 15px -1px #000;
 	max-width: 400px;
+	box-shadow: 0 0 15px -1px #000;
 `;
 
 const StyledBox = styled(Box)`
