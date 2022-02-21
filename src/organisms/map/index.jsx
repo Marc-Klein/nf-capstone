@@ -2,6 +2,7 @@ import React from "react";
 import NoSsrMap from "../../atoms/no-ssr";
 import BottomNav from "../../molecules/bottom-nav";
 import ResponsiveAppBar from "../../molecules/app-bar";
+
 import Theme from "../../ions/mui-theme";
 
 const MyMap = () => {
@@ -11,6 +12,7 @@ const MyMap = () => {
 				<ResponsiveAppBar />
 			</Theme>
 			<NoSsrMap />
+			{/*<Chat />*/}
 			<BottomNav />
 		</div>
 	);

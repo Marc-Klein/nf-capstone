@@ -6,6 +6,13 @@ import ReportIcon from "@mui/icons-material/Report";
 import ShieldIcon from "@mui/icons-material/Shield";
 import HomeIcon from "@mui/icons-material/Home";
 
+const ButtonMessages = {
+	danger: "Pls send help to location!",
+	suspicious: "Something od is going on!",
+	safe: "Im safe!",
+	home: "Im at home!",
+};
+
 const BottomNav = () => {
 	const [value, setValue] = React.useState("");
 	const handleChange = () => (event, newValue) => {

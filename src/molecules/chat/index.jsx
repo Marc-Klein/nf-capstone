@@ -38,7 +38,6 @@ const Chat = () => {
 
 	return (
 		<div>
-			<div>React Chat Example</div>
 			<div>
 				{messages.map(message => {
 					return (
