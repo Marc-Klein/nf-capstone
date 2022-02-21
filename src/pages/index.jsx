@@ -21,6 +21,7 @@ const StyledDiv = styled.div`
 	border-radius: 2em;
 	background: #fff;
 	box-shadow: 0 0 15px -1px #000;
+	max-width: 400px;
 `;
 
 const StyledBox = styled(Box)`
