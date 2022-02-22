@@ -12,7 +12,7 @@ import React, { useEffect, useState } from "react";
 import produce from "immer";
 
 const Chat = () => {
-	const [messages, setMessages] = useState([]);
+	const [messages] = useState([]);
 	const { data: session } = useSession();
 	const [users, setUsers] = useState([]);
 	const [name, setName] = useState("");
