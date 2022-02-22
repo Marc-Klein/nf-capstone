@@ -20,14 +20,14 @@ const markerIcon = leaflet.divIcon({
 	iconAnchor: [12, 40],
 });
 
-const Location = () => {
-	const [position, setPosition] = useState(null);
-	const map = useMapEvents({
-		locationfound(event) {
-			setPosition(event.latlng);
-			map.flyTo(event.latlng, [16]);
-		},
-	});
+const Location = ({ position }) => {
+	// const [position, setPosition] = useState(null);
+	// const map = useMapEvents({
+	// 	locationfound(event) {
+	// 		setPosition(event.latlng);
+	// 		map.flyTo(event.latlng, [16]);
+	// 	},
+	// });
 
 	return position === null ? null : (
 		<Marker position={position} icon={markerIcon}>

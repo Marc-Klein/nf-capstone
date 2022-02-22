@@ -7,47 +7,45 @@ import CustomLogin from "../molecules/login";
 import { useSession } from "next-auth/react";
 import styled from "@emotion/styled";
 import Typography from "@mui/material/Typography";
-
-const StyledDiv = styled.div`
-	display: flex;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	align-items: center;
-	justify-content: center;
-	width: 90%;
-	max-width: 400px;
-	height: 35%;
-	max-height: 380px;
-	transform: translate(-50%, -50%);
-	border-radius: 2em;
-	background: #fff;
-	box-shadow: 0 0 15px -1px #000;
-`;
+import { Global, css } from "@emotion/react";
+import { pxToRem } from "../ions/utils/unit";
 
 const StyledBox = styled(Box)`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
+	margin: 2rem;
+	max-width: ${pxToRem(400)};
 `;
+
+const globalStyles = (
+	<Global
+		styles={css`
+			html {
+				height: 100%;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				min-height: 100%;
+			}
+			#__next {
+				display: contents;
+			}
+		`}
+	/>
+);
 
 const Page = () => {
 	const { data: session } = useSession();
 	if (!session) {
 		return (
-			<StyledDiv>
-				<StyledBox>
-					<Typography variant="h4" component="h1" align="center">
-						Please login
-						<br />
-						<br />
-					</Typography>
-					<CustomLogin />
-				</StyledBox>
-			</StyledDiv>
+			<StyledBox>
+				{globalStyles}
+				<Typography variant="h4" component="h1" align="center" marginBottom={5}>
+					Please login
+				</Typography>
+				<CustomLogin />
+			</StyledBox>
 		);
 	}
 
