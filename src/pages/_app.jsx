@@ -6,13 +6,14 @@ import Theme from "../ions/mui-theme";
 
 import { PubNubProvider } from "pubnub-react";
 import PubNub from "pubnub";
+import { v4 as uuid } from "uuid";
 
 const publishKey = process.env.NEXT_PUBLIC_PUBNUB_PUBLISH_KEY;
 const subscribeKey = process.env.NEXT_PUBLIC_PUBNUB_SUBSCRIBE_KEY;
 const pubnub = new PubNub({
 	publishKey,
 	subscribeKey,
-	uuid: "eauk435!rhgjk124(&aerkllkjiovf9804wu902359uhf0hg",
+	uuid: uuid(),
 });
 
 const App = ({ Component, pageProps }) => {
