@@ -9,10 +9,11 @@ import styled from "@emotion/styled";
 import Typography from "@mui/material/Typography";
 import { Global, css } from "@emotion/react";
 import { pxToRem } from "../ions/utils/unit";
+import LoadingImage from "../atoms/image-login";
 
 const StyledBox = styled(Box)`
-	margin: 2rem;
 	max-width: ${pxToRem(400)};
+	margin: 2rem;
 `;
 
 const globalStyles = (
@@ -41,9 +42,9 @@ const Page = () => {
 		return (
 			<StyledBox>
 				{globalStyles}
-				<Typography variant="h4" component="h1" align="center" marginBottom={5}>
-					Please login
-				</Typography>
+				{/*<Typography variant="h4" component="h1" align="center" marginBottom={5}>*/}
+				{/*</Typography>*/}
+				<LoadingImage width="5500" height="5500" />
 				<CustomLogin />
 			</StyledBox>
 		);
@@ -52,7 +53,7 @@ const Page = () => {
 	return (
 		<Layout>
 			<Head>
-				<title key="title">Walk with me</title>
+				<title key="title">Walking Buddy</title>
 			</Head>
 			<Map />
 		</Layout>

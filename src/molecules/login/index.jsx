@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
 import { signIn } from "next-auth/react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -12,10 +11,6 @@ const StyledButton = styled(Button)`
 	border: none;
 `;
 
-const StyledButtonContainer = styled(ButtonGroup)`
-	border: none;
-`;
-
 const CustomLogin = () => {
 	return (
 		<Stack gap={2}>
@@ -23,7 +18,7 @@ const CustomLogin = () => {
 				sx={{
 					background: "#000",
 					color: "white",
-					letterSpacing: "0.2em",
+					letterSpacing: "0.42em",
 					"&.MuiButtonBase-root:hover": {
 						bgcolor: "#121212",
 					},
@@ -55,7 +50,7 @@ const CustomLogin = () => {
 				sx={{
 					background: "#db4a39",
 					color: "white",
-					letterSpacing: "0.165em",
+					letterSpacing: "0.33em",
 					"&.MuiButtonBase-root:hover": {
 						bgcolor: "#903326",
 					},
