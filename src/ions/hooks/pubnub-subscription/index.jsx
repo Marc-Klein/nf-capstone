@@ -1,6 +1,7 @@
 import { usePubNub } from "pubnub-react";
 import { useCallback, useEffect } from "react";
 
+//Subscription and message handler
 const useSubscription = (channels, handleMessage) => {
 	const [mainChannel] = channels;
 	const pubnub = usePubNub();
