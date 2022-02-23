@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-// import { useState } from "react";
+import React from "react";
 import { Marker, Popup } from "react-leaflet";
 import leaflet from "leaflet";
 import useCurrentLocation from "../../ions/hooks/current-position";

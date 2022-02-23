@@ -11,13 +11,6 @@ import Alert from "@mui/material/Alert";
 
 import Chat from "../../organisms/chat";
 
-// const buttonMessages = {
-// 	danger: "Pls send help to location!",
-// 	suspicious: "Something od is going on!",
-// 	safe: "Im safe!",
-// 	home: "Im at home!",
-// };
-
 const BottomNav = () => {
 	const [value, setValue] = useState("");
 	const [open, setOpen] = useState(false);
