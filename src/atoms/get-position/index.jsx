@@ -1,7 +1,8 @@
 import React from "react";
-import { useState } from "react";
-import { useMapEvents, Marker, Popup } from "react-leaflet";
+// import { useState } from "react";
+import { Marker, Popup } from "react-leaflet";
 import leaflet from "leaflet";
+import useCurrentLocation from "../../ions/hooks/current-position";
 
 const markerIcon = leaflet.divIcon({
 	html: `
@@ -20,14 +21,10 @@ const markerIcon = leaflet.divIcon({
 	iconAnchor: [12, 40],
 });
 
-const Location = ({ position }) => {
-	// const [position, setPosition] = useState(null);
-	// const map = useMapEvents({
-	// 	locationfound(event) {
-	// 		setPosition(event.latlng);
-	// 		map.flyTo(event.latlng, [16]);
-	// 	},
-	// });
+const Location = () => {
+	//here we use currentPosition hook, for firing our Button
+	const position = useCurrentLocation();
+	console.log(position);
 
 	return position === null ? null : (
 		<Marker position={position} icon={markerIcon}>
