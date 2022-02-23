@@ -6,7 +6,6 @@ import Map from "../organisms/map";
 import CustomLogin from "../molecules/login";
 import { useSession } from "next-auth/react";
 import styled from "@emotion/styled";
-import Typography from "@mui/material/Typography";
 import { Global, css } from "@emotion/react";
 import { pxToRem } from "../ions/utils/unit";
 import LoadingImage from "../atoms/image-login";
@@ -44,7 +43,7 @@ const Page = () => {
 				{globalStyles}
 				{/*<Typography variant="h4" component="h1" align="center" marginBottom={5}>*/}
 				{/*</Typography>*/}
-				<LoadingImage width="5500" height="5500" />
+				<LoadingImage />
 				<CustomLogin />
 			</StyledBox>
 		);
