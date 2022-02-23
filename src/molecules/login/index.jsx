@@ -1,30 +1,26 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
 import { signIn } from "next-auth/react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import styled from "@emotion/styled";
+import Stack from "@mui/material/Stack";
 
 const StyledButton = styled(Button)`
 	border: none;
 `;
 
-const StyledButtonContainer = styled(ButtonGroup)`
-	border: none;
-`;
-
 const CustomLogin = () => {
 	return (
-		<StyledButtonContainer orientation="vertical" aria-label="vertical button group">
+		<Stack gap={2}>
 			<StyledButton
 				sx={{
 					background: "#000",
 					color: "white",
-					letterSpacing: "0.2em",
+					letterSpacing: "0.42em",
 					"&.MuiButtonBase-root:hover": {
-						bgcolor: "#000",
+						bgcolor: "#121212",
 					},
 				}}
 				startIcon={<GitHubIcon />}
@@ -32,7 +28,7 @@ const CustomLogin = () => {
 					signIn("github");
 				}}
 			>
-				Sign in with GitHub!
+				GitHub
 			</StyledButton>
 			<StyledButton
 				sx={{
@@ -40,7 +36,7 @@ const CustomLogin = () => {
 					color: "white",
 					letterSpacing: "0.1em",
 					"&.MuiButtonBase-root:hover": {
-						bgcolor: "#3b5998",
+						bgcolor: "#27488e",
 					},
 				}}
 				startIcon={<FacebookIcon />}
@@ -48,15 +44,15 @@ const CustomLogin = () => {
 					signIn("facebook");
 				}}
 			>
-				Sign in with Facebook!
+				Facebook
 			</StyledButton>
 			<StyledButton
 				sx={{
 					background: "#db4a39",
 					color: "white",
-					letterSpacing: "0.165em",
+					letterSpacing: "0.33em",
 					"&.MuiButtonBase-root:hover": {
-						bgcolor: "#db4a39",
+						bgcolor: "#903326",
 					},
 				}}
 				startIcon={<GoogleIcon />}
@@ -64,9 +60,9 @@ const CustomLogin = () => {
 					signIn("google");
 				}}
 			>
-				Sign in with Google!
+				Google
 			</StyledButton>
-		</StyledButtonContainer>
+		</Stack>
 	);
 };
 

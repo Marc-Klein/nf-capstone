@@ -10,7 +10,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import StyledAppBar from "./styled";
+import AppBar from "@mui/material/AppBar";
 import { signOut, useSession } from "next-auth/react";
 // import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 // import CoPresentIcon from "@mui/icons-material/CoPresent";
@@ -39,7 +39,7 @@ const ResponsiveAppBar = () => {
 	};
 
 	return (
-		<StyledAppBar position="static">
+		<AppBar position="static">
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					<Typography
@@ -93,7 +93,7 @@ const ResponsiveAppBar = () => {
 						component="div"
 						sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
 					>
-						Test
+						On the Go
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
 						{pages.map(page => (
@@ -147,7 +147,7 @@ const ResponsiveAppBar = () => {
 					</Box>
 				</Toolbar>
 			</Container>
-		</StyledAppBar>
+		</AppBar>
 	);
 };
 export default ResponsiveAppBar;
