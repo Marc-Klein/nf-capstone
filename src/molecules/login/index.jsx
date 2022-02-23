@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import styled from "@emotion/styled";
-import Stack from "@mui/material/stack";
+import Stack from "@mui/material/Stack";
 
 const StyledButton = styled(Button)`
 	border: none;
