@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import styled from "@emotion/styled";
-import Stack from "@mui/material/Stack";
+// import Stack from "@mui/material/Stack";
 
 const StyledButton = styled(Button)`
 	border: none;
@@ -13,7 +13,7 @@ const StyledButton = styled(Button)`
 
 const CustomLogin = () => {
 	return (
-		<Stack gap={2}>
+		<div>
 			<StyledButton
 				sx={{
 					background: "#000",
@@ -62,7 +62,7 @@ const CustomLogin = () => {
 			>
 				Google
 			</StyledButton>
-		</Stack>
+		</div>
 	);
 };
 
