@@ -56,24 +56,26 @@ const Map = () => {
 		map.locate();
 	}, []);
 
-	// useEffect(() => {
-	// 	const interval = setInterval(() => {
-	// 		const lat = Math.random() / 100_000;
-	// 		const lng = Math.random() / 100_000;
-	//
-	// 		setPosition(previousState => {
-	// 			return { lat: previousState.lat + lat, lng: previousState.lng + lng };
-	// 		});
-	// 	}, 500);
-	// 	return () => {
-	// 		clearInterval(interval);
-	// 	};
-	// }, []);
+	//mock for moving
+	useEffect(() => {
+		const interval = setInterval(() => {
+			const lat = Math.random() / 100_000;
+			const lng = Math.random() / 100_000;
+
+			setPosition(previousState => {
+				return { lat: previousState.lat + lat, lng: previousState.lng + lng };
+			});
+		}, 500);
+		return () => {
+			clearInterval(interval);
+		};
+	}, []);
 	return (
 		<>
 			{leafletButtonStyles}
 			<StyledMapContainer
 				watch
+				setView
 				enableHighAccuracy
 				zoomControl
 				center={{ lat: 51.220915, lng: 10.357579 }}
