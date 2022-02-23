@@ -74,12 +74,14 @@ const Map = () => {
 		<>
 			{leafletButtonStyles}
 			<StyledMapContainer
-				watch
 				setView
 				enableHighAccuracy
 				zoomControl
-				center={{ lat: 51.220915, lng: 10.357579 }}
-				zoom={[6]}
+				center={{
+					lat: 49.2170162880247,
+					lng: 7.194373750489856,
+				}}
+				zoom={14}
 				scrollWheelZoom={false}
 			>
 				<TileLayer

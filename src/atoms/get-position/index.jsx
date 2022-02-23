@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { useState } from "react";
 import { Marker, Popup } from "react-leaflet";
 import leaflet from "leaflet";
@@ -24,12 +24,13 @@ const markerIcon = leaflet.divIcon({
 const Location = () => {
 	//here we use currentPosition hook, for firing our Button
 	const position = useCurrentLocation();
-	console.log(position);
 
-	return position === null ? null : (
-		<Marker position={position} icon={markerIcon}>
-			<Popup>You are here!</Popup>
-		</Marker>
+	return (
+		position && (
+			<Marker position={position} icon={markerIcon}>
+				<Popup>You are here!</Popup>
+			</Marker>
+		)
 	);
 };
 

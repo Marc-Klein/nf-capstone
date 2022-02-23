@@ -10,14 +10,15 @@ import { getSession, useSession } from "next-auth/react";
 import { usePubNub } from "pubnub-react";
 import React, { useEffect, useState } from "react";
 import produce from "immer";
-
+import Box from "@mui/material/Box";
+const channel = "WalkWithMe";
+const channels = [channel];
 const Chat = () => {
 	const [messages] = useState([]);
 	const { data: session } = useSession();
 	const [users, setUsers] = useState([]);
 	const [name, setName] = useState("");
-	const [channel, setChannel] = useState("");
-	const [channels, setChannels] = useState([]);
+
 	const [subscribed, setSubscribed] = useState(false);
 
 	const pubnub = usePubNub();
@@ -79,7 +80,7 @@ const Chat = () => {
 		return () => {
 			pubnub.removeListener(listeners);
 		};
-	}, [session, pubnub, channels]);
+	}, [session, pubnub]);
 
 	useEffect(() => {
 		if (session) {
@@ -100,10 +101,10 @@ const Chat = () => {
 				setUsers(previousUsers);
 			});
 		}
-	}, [channels, pubnub]);
+	}, [pubnub]);
 
 	return (
-		<>
+		<Box sx={{ p: 2 }}>
 			<Typography>Welcome {session.user.name}</Typography>
 			{users.map(user => {
 				return (
@@ -157,7 +158,7 @@ const Chat = () => {
 						setName("");
 					}}
 				>
-					<Stack spacing={2}>
+					<Stack spacing={2} sx={{ pt: 2 }}>
 						<TextField
 							name="name"
 							label="Enter your name"
@@ -172,10 +173,9 @@ const Chat = () => {
 					</Stack>
 				</form>
 			) : (
-				<form
-					onSubmit={event_ => {
-						event_.preventDefault();
-						setChannels([channel]);
+				<Button
+					variant="contained"
+					onClick={() => {
 						pubnub.subscribe({
 							channels: [channel],
 							withPresence: true,
@@ -183,22 +183,10 @@ const Chat = () => {
 						setSubscribed(true);
 					}}
 				>
-					<Stack spacing={2}>
-						<TextField
-							name="channel"
-							label="Join channel"
-							value={channel}
-							onChange={e => {
-								setChannel(e.target.value);
-							}}
-						/>
-						<Button type="submit" variant="contained">
-							Join channel
-						</Button>
-					</Stack>
-				</form>
+					Join channel
+				</Button>
 			)}
-		</>
+		</Box>
 	);
 };
 
