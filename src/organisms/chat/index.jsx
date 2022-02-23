@@ -6,13 +6,13 @@ import CardHeader from "@mui/material/CardHeader";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import { useSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
 import { usePubNub } from "pubnub-react";
 import React, { useEffect, useState } from "react";
 import produce from "immer";
 
 const Chat = () => {
-	const [messages, setMessages] = useState([]);
+	const [messages] = useState([]);
 	const { data: session } = useSession();
 	const [users, setUsers] = useState([]);
 	const [name, setName] = useState("");
@@ -24,12 +24,15 @@ const Chat = () => {
 
 	useEffect(() => {
 		const listeners = {
-			message: event_ => {},
+			message: () => {},
 			presence: event_ => {
 				switch (event_.action) {
 					case "join":
 						if (event_.uuid === session.user.id) {
-							const state = { name: session.user.name, image: session.user.image };
+							const state = {
+								name: session.user.name,
+								image: session.user.image,
+							};
 							console.log({ state });
 							pubnub.setState({ channels, state });
 							setUsers(
@@ -101,9 +104,7 @@ const Chat = () => {
 
 	return (
 		<>
-			<Typography variant="h4" component="div">
-				Welcome {session.user.name}
-			</Typography>
+			<Typography>Welcome {session.user.name}</Typography>
 			{users.map(user => {
 				return (
 					<Card key={user.id}>
@@ -114,7 +115,7 @@ const Chat = () => {
 					</Card>
 				);
 			})}
-			<Stack spacing={2} sx={{ py: 2 }}>
+			<Stack spacing={1} sx={{ py: 1 }}>
 				{messages.map(message => {
 					return (
 						<Card key={message.id}>
@@ -128,7 +129,7 @@ const Chat = () => {
 				})}
 			</Stack>
 			{subscribed && (
-				<Stack spacing={2} sx={{ py: 2 }}>
+				<Stack spacing={1} sx={{ py: 1 }}>
 					<Button
 						type="submit"
 						variant="contained"
@@ -202,3 +203,8 @@ const Chat = () => {
 };
 
 export default Chat;
+export const getServerSideProps = async context => {
+	return {
+		props: { session: await getSession(context) },
+	};
+};
