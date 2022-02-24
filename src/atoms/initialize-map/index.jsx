@@ -57,19 +57,19 @@ const Map = () => {
 	}, []);
 
 	//mock for moving
-	useEffect(() => {
-		const interval = setInterval(() => {
-			const lat = Math.random() / 100_000;
-			const lng = Math.random() / 100_000;
-
-			setPosition(previousState => {
-				return { lat: previousState.lat + lat, lng: previousState.lng + lng };
-			});
-		}, 500);
-		return () => {
-			clearInterval(interval);
-		};
-	}, []);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		const lat = Math.random() / 100_000;
+	// 		const lng = Math.random() / 100_000;
+	//
+	// 		setPosition(previousState => {
+	// 			return { lat: previousState.lat + lat, lng: previousState.lng + lng };
+	// 		});
+	// 	}, 500);
+	// 	return () => {
+	// 		clearInterval(interval);
+	// 	};
+	// }, []);
 	return (
 		<>
 			{leafletButtonStyles}
@@ -78,10 +78,10 @@ const Map = () => {
 				enableHighAccuracy
 				zoomControl
 				center={{
-					lat: 49.2170162880247,
-					lng: 7.194373750489856,
+					lat: 51.2170162880247,
+					lng: 10.194373750489856,
 				}}
-				zoom={14}
+				zoom={6}
 				scrollWheelZoom={false}
 			>
 				<TileLayer
