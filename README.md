@@ -1,5 +1,5 @@
 # This is my Capstone Project  
-#***Walking Buddy*** 
+# ***Walking Buddy*** 
 
 ![image info](./images/WBSlidepng.png)
 
@@ -10,7 +10,7 @@ your friends watch over you. You can invite your friends to your session and
 share your location in real-time with them. You can exchange 
 short messages which are visible for everyone on your channel. 
   
-###Tech Stack
+### Tech Stack
 
 - React
 - Next.js
