@@ -2,7 +2,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import StyledMapContainer from "./styled.js";
 import Location from "../get-position";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useMap, TileLayer } from "react-leaflet";
 import Leaflet from "leaflet";
 import { css, Global } from "@emotion/react";
@@ -51,7 +51,7 @@ const leafletButton = css`
 const leafletButtonStyles = <Global styles={leafletButton} />;
 
 const Map = () => {
-	const [position, setPosition] = useState({ lat: 49.2169914, lng: 7.1943703 });
+	const position = { lat: 49.2169914, lng: 7.1943703 };
 	const locateMe = useCallback(map => {
 		map.locate();
 	}, []);
