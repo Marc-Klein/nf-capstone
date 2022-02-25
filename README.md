@@ -7,8 +7,8 @@
 
 With "Walking Buddy" you can get home safely while 
 your friends watch over you. You can invite your friends to your session and 
-share your location in real-time with them. You can share 
-short messages which are visible for everyone in your channel. 
+share your location in real-time with them. You can exchange 
+short messages which are visible for everyone on your channel. 
   
 ###Tech Stack
 
@@ -23,4 +23,4 @@ short messages which are visible for everyone in your channel.
 - Mongoose
 - Node.js
 - Express
-- PubNub
+- PubNub 
