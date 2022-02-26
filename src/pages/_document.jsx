@@ -25,6 +25,7 @@ class MyDocument extends Document {
 					<meta name="mobile-web-app-capable" content="yes" />
 					<meta name="robots" content="noindex,nofollow" />
 					<meta name="msapplication-tap-highlight" content="no" />
+					<title>Walking Buddy</title>
 				</Head>
 				<body>
 					<Main />

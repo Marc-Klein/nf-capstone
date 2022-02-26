@@ -41,8 +41,6 @@ const Page = () => {
 		return (
 			<StyledBox>
 				{globalStyles}
-				{/*<Typography variant="h4" component="h1" align="center" marginBottom={5}>*/}
-				{/*</Typography>*/}
 				<LoadingImage />
 				<CustomLogin />
 			</StyledBox>
