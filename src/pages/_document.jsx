@@ -4,13 +4,14 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
 	render() {
 		return (
-			<Html>
+			<Html lang="english">
 				<Head>
+					{/* eslint-disable-next-line @next/next/no-title-in-document-head */}
+					<title>Walking Buddy</title>
 					<link rel="apple-touch-icon" sizes="180x180" href="/icon-192x192.png" />
-					<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-					<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-					<link rel="manifest" href="/site.webmanifest" />
-					<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+					{/*<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />*/}
+					{/*<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />*/}
+
 					<meta name="msapplication-TileColor" content="#da532c" />
 					<meta name="theme-color" content="#4a4aff" />
 
@@ -25,7 +26,6 @@ class MyDocument extends Document {
 					<meta name="mobile-web-app-capable" content="yes" />
 					<meta name="robots" content="noindex,nofollow" />
 					<meta name="msapplication-tap-highlight" content="no" />
-					<title>Walking Buddy</title>
 				</Head>
 				<body>
 					<Main />
