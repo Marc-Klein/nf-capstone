@@ -9,8 +9,8 @@ export default NextAuth({
 	adapter: MongoDBAdapter(clientPromise),
 	providers: [
 		GithubProvider({
-			clientId: process.env.GITHUB_ID,
-			clientSecret: process.env.GITHUB_SECRET,
+			clientId: process.env.GITHUB_ID_VERCEL,
+			clientSecret: process.env.GITHUB_SECRET_VERCEL,
 		}),
 		FacebookProvider({
 			clientId: process.env.FACEBOOK_ID,
